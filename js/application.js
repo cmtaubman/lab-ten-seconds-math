@@ -12,19 +12,18 @@ var $solutionInput = $("#solution-input");
 
 //to start the game
 $solutionInput.keydown(function() {
-  counter = setInterval(time, 1000);
+  counter = setInterval(timer, 1000);
   console.log("hey");
 });
 
-function time() {
-  count--
+function timer() {
+  count=count-1
   $secondsLeft.text(count);
-  if (count === 0) {
+  if (count<=-1) {
     clearInterval(counter);
   }
 };
 
-time();
 
 //MY PREVIOUS TIMER FUNCTION
 // var counter=setInterval(timer, 1000); //1000 will  run it every 1 second
